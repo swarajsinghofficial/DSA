@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Journey Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 DSA Journey Tracker</h1>
+            <p>Track your Data Structures & Algorithms learning progress</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalTopics">0</h3>
+                <p>Topics Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="easy">0</h3>
+                <p>Easy</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="medium">0</h3>
+                <p>Medium</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="hard">0</h3>
+                <p>Hard</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-add" onclick="openAddModal()">➕ Add Topic</button>
+            <button class="btn-export" onclick="exportData()">📥 Export as JSON</button>
+            <button class="btn-clear" onclick="clearAllData()">🗑️ Clear All</button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search topics..." onkeyup="filterTopics()">
+        </div>
+
+        <div id="topicsContainer" class="topics-grid"></div>
+
+        <div id="emptyState" class="empty-state">
+            <h2>No topics yet!</h2>
+            <p>Click "Add Topic" to start tracking your DSA journey</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>💪 Keep Learning, Keep Growing! | Last Updated: <span id="lastUpdated"></span></p>
+    </footer>
+
+    <!-- Add/Edit Modal -->
+    <div id="topicModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Add New Topic</h2>
+
+            <div class="form-group">
+                <label for="topicName">Topic Name *</label>
+                <input type="text" id="topicName" placeholder="e.g., Binary Search, Merge Sort">
+            </div>
+
+            <div class="form-group">
+                <label for="difficulty">Difficulty Level</label>
+                <select id="difficulty"
+                    style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em;">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="3" placeholder="What does this topic cover?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="code">Code Implementation</label>
+                <textarea id="code" rows="8" placeholder="Paste your code here..."></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="close-btn" onclick="closeModal()">Cancel</button>
+                <button class="submit-btn" onclick="saveTopic()">Save Topic</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

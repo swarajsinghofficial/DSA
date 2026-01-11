@@ -1,5 +1,4 @@
-import java.util.*;
-public class pattern05 {
+public class pattern07 {
     public static void pattern(int n){
         for(int i=n;i<=1;i--){
             for (int j=n;j<=i;j--){
@@ -8,9 +7,8 @@ public class pattern05 {
         }System.out.println();
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        pattern(n);
+       
+        pattern(5);
         
     }
 }

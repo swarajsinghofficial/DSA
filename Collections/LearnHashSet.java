@@ -9,7 +9,7 @@ public class LearnHashSet {
         set.add(40);
         set.add(2);
         
-        System.out.println(set);
+        System.out.println(set);     // Prints elements in set in random order
         
         set.remove(2);
         System.out.println(set);

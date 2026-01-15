@@ -10,7 +10,7 @@ public class RecursionP3 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter any number:");
+        System.out.print("Enter any number:");
         int n = sc.nextInt();
         RecP3(n);
         

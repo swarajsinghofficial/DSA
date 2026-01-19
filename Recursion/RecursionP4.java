@@ -11,7 +11,6 @@ public class RecursionP4 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the no. upto which you want to print");
         int num = sc.nextInt();
         Backtrack(5,num);
 

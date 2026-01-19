@@ -1,11 +1,11 @@
 import java.util.*;
-public class RecursionSum {
-    public static void Sum(int i, int Sum){
+public class RecursionSum { 
+    public static void Sum(int i, int Sum){          // Parameterised Recursion
         if (i<1){
             System.out.println(Sum);
             return;
         }
-        Sum(i-1,Sum +i);
+        Sum(i-1,Sum +i); 
 
     }
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 public class ArrayReverseRec {
     public static void Rev(int[] arr,int i,int j){
         
-        if(i>j){
+        if(i>=j){
             return;
         }
         int temp = arr[i];
